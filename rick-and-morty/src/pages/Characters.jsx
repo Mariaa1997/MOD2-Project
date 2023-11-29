@@ -1,35 +1,39 @@
-import { useEffect, useState } from 'react'
-import Form from '../components/Form'
-const Characters = () => {
+import React from 'react'
+import { useState, useEffect } from 'react'
+import Form from '../components/Form';
+import ListDisplay from '../components/ListDisplay';
 
-    const [characterList, setCharacterList] = useState([]);
-useEffect(() => {
-    fetch('https://rickandmortyapi.com/api/character')
-    .then(response => response.json())
-    .then(data => {
-        setCharacterList(data.results);
-    })
-    .catch(error => {
-        console.error('Error', error);
-    });
-},[]);
 
-return (
+function Characters() {
+  const [characters, setCharacters] = useState([]);
+
+    const getCharacter = async (searchTerm) => {
+      console.log(searchTerm)
+      const baseUrl = 'https://rickandmortyapi.com/api/character'
+      const url = baseUrl +'?name=' + searchTerm
+      console.log(url)
+      try {
+        const response = await fetch(url);
+        console.log(url);
+        const data = await response.json();
+        console.log(data);
+        setCharacters(data.results);
+      } catch (e) {
+        console.error(e);
+      };
+    };
+  //   useEffect(() => {
+  //   getCharacter()
+  // }, [searchTerm]);
+  
+  
+  return (
     <div>
-        <h2>Rick and Morty</h2>
-        {characterList.map(character => (
-            <div key={character.id}>
-                <img src={character.image} alt={character.name} />
-                <h4>{character.name}</h4>
-                <h4>{character.status}</h4>
-                <h4>{character.species}</h4>
-                <h4>{character.gender}</h4>
-                </div>
-        ))}
+      <Form characterssearch={getCharacter} />
+      <ListDisplay characters1={characters} />
     </div>
-);
-        };
-   
+  )
+}
 
 
 export default Characters

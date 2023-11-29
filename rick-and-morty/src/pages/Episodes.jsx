@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react"
 
-
-function Episodes() {
-  return (
-    <div>Episodes</div>
-  )
+function Episodes () {
 }
-
 export default Episodes
