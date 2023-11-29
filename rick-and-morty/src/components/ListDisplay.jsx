@@ -1,23 +1,9 @@
-// import React from 'react'
-// import Characters from '../pages/Characters'
+import React from 'react'
 
-// function ListDisplay({searchObj}) {
-//     const notLoaded = () => {
-//         return ( 
-//             <div> image result</div>
-//         )
-//     }
+function ListDisplay() {
+  return (
+    <div>ListDisplay</div>
+  )
+}
 
-//     const loaded = () => {
-//         console.log(searchObj)
-//         return (
-//             <div>
-//            <h1>{Characters.CharactersList}</h1>
-//             </div>
-//         )
-//     }
-//     return searchObj ? loaded() : notLoaded();
-// }
-    
-  
-// export default ListDisplay
+export default ListDisplay

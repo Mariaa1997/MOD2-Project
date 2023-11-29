@@ -13,7 +13,7 @@ function Form(props) {
     const handleSubmit = (event) =>{
         event.preventDefault();
         console.log(formData.searchTerm)
-        props.getCharacters(formData.searchTerm);
+        props.getCharacter(formData.searchTerm);
     }
   return (
     <div>
