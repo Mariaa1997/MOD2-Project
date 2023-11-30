@@ -22,15 +22,18 @@ function Characters() {
         console.error(e);
       };
     };
-  //   useEffect(() => {
-  //   getCharacter()
-  // }, [searchTerm]);
+//     useEffect(() => {
+//     getCharacter()
+//   }, []);
   
   
   return (
     <div>
+        <h1 className='animation'>Rick and Morty Characters</h1>
       <Form characterssearch={getCharacter} />
+      <div className='card'>
       <ListDisplay characters1={characters} />
+      </div>
     </div>
   )
 }

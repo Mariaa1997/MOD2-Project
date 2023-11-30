@@ -7,16 +7,17 @@ const ListDisplay = ({ characters1 }) => {
   const loaded = () => {
     return (
       <div>
-        <h2>Rick and Morty</h2>
-
-        <ul>
+        <ul className="card-container">
           {characters1.map((character) => (
             <li key={character.id}>
-              <img src={character.image} alt={character.name} />
-              <h4>{character.name}</h4>
+              <div>
+              <img src={character.image} alt={character.name} className="card-img"/>
+              <h3>{character.name}</h3>
               <h4>{character.status}</h4>
               <h4>{character.species}</h4>
               <h4>{character.gender}</h4>
+              </div>
+              
             </li>
           ))}
         </ul>
@@ -24,6 +25,7 @@ const ListDisplay = ({ characters1 }) => {
     );
   };
   const loading = () => {
+  
     return <h1>No Character display</h1>;
   };
   return characters1 ? loaded() : loading();

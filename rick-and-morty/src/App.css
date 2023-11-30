@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/33/a2/07/33a207715eb8d009767fe0b123f2e198.png);
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  padding: 9px;
+  font-size: 2em;
+  max-width: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 5rem;
+  position: absolute;
+  top: 1px;
+}
+.form {
+  position: relative;
+  top: 5px;
+  left: 395px;
+  text-align: center;
+  width: 40%;
+  border-radius: 5px;
+  background-color: skyblue;
+  text-decoration: none;
+  margin: 0.5rem;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.card-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 10px 10px grey;
+  margin: 0.5rem;
+  background-color: burlywood;
+  display: flex;
+  place-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.animation{
+  color: violet;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.title {
+  text-align: center;
+  color: pink;
+  position: relative;
+  right: -460px;
+  top: 50px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.drop-down {
+  position: relative;
+  color: bisque;
+  top: 50px;
+ right: -550px;
+  text-align: center;
+  width: 40%;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title, .drop-down {
+  position: relative;
+  top:55px;
+  left: -0px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title2 {
+  text-align: center;
+  color: pink;
+  position: relative;
+  right: -460px;
+  top: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.drop-down2{
+  position: relative;
+  color: bisque;
+  top: 50px;
+ right: -550px;
+  text-align: center;
+  width: 40%;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.title2, .drop-down2 {
+  position: relative;
+  top:55px;
+  left: 0px;
 }
