@@ -3,7 +3,7 @@
 RICK AND MORTY!!!!
 
 This web application of Rick and Morty was made by using API in React.js
-![]("rick-and-morty.png")
+![Alt text](rick-and-morty-1.png)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
