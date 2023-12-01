@@ -39,7 +39,7 @@ My stretch goal:
 As stated in what I struggled with the most, the dropdown with the fetching of images was my stretch goal. 
 
 Deploy:
-https://marias-rick-and-morty-mod2.netlify.app
+https://silly-zabaione-f22e71.netlify.app
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
