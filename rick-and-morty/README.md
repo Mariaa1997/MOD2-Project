@@ -32,6 +32,9 @@ I also installed the react-router-dom to be added into my dependencies
 Unsolved Problems:
 <!-- A LOT OF THEM!! -->
 
+Deploy:
+https://65694117e2501f3c65df4e59--golden-licorice-b44562.netlify.app/
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
