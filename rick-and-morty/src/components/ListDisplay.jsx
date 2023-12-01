@@ -11,11 +11,13 @@ const ListDisplay = ({ characters1 }) => {
           {characters1.map((character) => (
             <li key={character.id}>
               <div>
+                <div className="cards">
               <img src={character.image} alt={character.name} className="card-img"/>
               <h3>{character.name}</h3>
               <h4>{character.status}</h4>
               <h4>{character.species}</h4>
               <h4>{character.gender}</h4>
+              </div>
               </div>
               
             </li>

@@ -20,15 +20,12 @@ function Characters() {
         setCharacters(data.results);
       } catch (e) {
         console.error(e);
-      };
+      }
     };
-//     useEffect(() => {
-//     getCharacter()
-//   }, []);
   
   
   return (
-    <div>
+    <div className='character-style'>
         <h1 className='animation'>Rick and Morty Characters</h1>
       <Form characterssearch={getCharacter} />
       <div className='card'>

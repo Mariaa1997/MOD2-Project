@@ -4,7 +4,7 @@ RICK AND MORTY!!!!
 
 This web application of Rick and Morty was made by using API in React.js
 Also, HTML, CSS, and JS (jsx)
-![Alt text](rick-and-morty-1.png)
+![Alt text](<Screenshot 2023-12-01 174545-1.png>)
 
 How to create a React.js App using Vite:
 Open Visual Studio Code.
@@ -30,10 +30,13 @@ This will then open up your localhost</li>
 <ul>
 
 I also installed the react-router-dom to be added into my dependencies
--npm instal react-router-dom
+-npm install react-router-dom
 
-Unsolved Problems:
-<!-- A LOT OF THEM!! -->
+What I struggled with the most:
+UseEffect and fetching for episodes and locations because I wanted the images from characters page to display in my episodes and locations as we search for a specific episode/location.
+
+My stretch goal:
+As stated in what I struggled with the most, the dropdown with the fetching of images was my stretch goal. 
 
 Deploy:
 https://65694117e2501f3c65df4e59--golden-licorice-b44562.netlify.app/

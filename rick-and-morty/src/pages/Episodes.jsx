@@ -8,6 +8,11 @@ function Episodes() {
   const [episodeName, setEpisodeName] = useState();
   const [airDate, setAirDate] = useState();
   const [episodesFetched, setEpisodesFetched] = useState(false);
+  let i = 1;
+  useEffect(() => {
+    //we update the selection option everytime the "selectedOption" state changes
+    updateSelectedOption();
+  }, [selectedOption]);
   //fetch all episodes
   const getEpisodes = async () => {
     let results = [];
@@ -27,36 +32,37 @@ function Episodes() {
         setEpisodesFetched(true);
         createEpisodeList(results);
       }
-      //if a valid episode option was selected (anything other than "choose..."), update the selectedOption
-      if (selectedOption && selectedOption > 0) updateSelectedOption();
     } catch (e) {
       console.error(e);
     }
   };
   async function updateSelectedOption() {
-    let url = `https://rickandmortyapi.com/api/episode/${selectedOption}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    //now that we have the exact episode needed, lets update the variables needed (name & air date)
-    setEpisodeName(data.name);
-    setAirDate(data.air_date);
-    //if the episode does have characters, lets grab each character Id from the characters url string
-    if (data?.characters?.length) {
-      let characterIds = [];
-      const characters = data.characters;
-      characters.map((character) => {
-        const char = character.split("/");
-        const charId = char[char.length - 1];
-        //add each character Id to an array, and then fetch all the characters at once.
-        characterIds.push(charId);
-      });
-      //fetch all the characters at once.
-      url = `https://rickandmortyapi.com/api/character/${characterIds}`;
-      response = await fetch(url);
-      data = await response.json();
-      //if characters were returned from the API call, update the setChars variable
-      data.length ? setChars(data) : setChars(null);
-      setChars(data);
+    //if a valid location option was selected (anything other than "choose..."), update the selectedOption
+    if (selectedOption && selectedOption > 0) {
+      let url = `https://rickandmortyapi.com/api/episode/${selectedOption}`;
+      let response = await fetch(url);
+      let data = await response.json();
+      //now that we have the exact episode needed, lets update the variables needed (name & air date)
+      setEpisodeName(data.name);
+      setAirDate(data.air_date);
+      //if the episode does have characters, lets grab each character Id from the characters url string
+      if (data?.characters?.length) {
+        let characterIds = [];
+        const characters = data.characters;
+        characters.map((character) => {
+          const char = character.split("/");
+          const charId = char[char.length - 1];
+          //add each character Id to an array, and then fetch all the characters at once.
+          characterIds.push(charId);
+        });
+        //fetch all the characters at once.
+        url = `https://rickandmortyapi.com/api/character/${characterIds}`;
+        response = await fetch(url);
+        data = await response.json();
+        //if characters were returned from the API call, update the setChars variable
+        data.length ? setChars(data) : setChars(null);
+        setChars(data);
+      }
     }
   }
   function createEpisodeList(data) {
@@ -76,12 +82,12 @@ function Episodes() {
   getEpisodes();
 
   return (
-    <div>
-      <div className="title">
+    <div className="episode-style">
+      <div>
         <h1>Episode name: {episodeName}</h1>
-        <span>Air Date: {airDate}</span>
+        <h4>Air Date: {airDate}</h4>
       </div>
-      <div className="drop-down">
+      <div>
         <h3>Pick Episode</h3>
         <select onChange={(e) => setSelectedOption(e.target.value)}>
           {options?.map(({ value, label }, index) => (

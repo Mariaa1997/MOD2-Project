@@ -11,7 +11,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  background-color: yellow;
+  background-color:yellow;
   padding: 9px;
   font-size: 2em;
   max-width: 100%;
@@ -57,43 +57,19 @@
   color: violet;
   text-align: center;
 }
-.title {
-  text-align: center;
-  color: pink;
-  position: relative;
-  right: -460px;
-  top: 50px;
+.cards{
+  width: 100%;
+  margin: 0.5rem;
+  box-shadow: 10px 8px 10px 10px;
 }
-.drop-down {
-  position: relative;
-  color: bisque;
-  top: 50px;
- right: -550px;
-  text-align: center;
-  width: 40%;
+.episode-style{
+  color: salmon;
+  background-color: yellow;
 }
-.title, .drop-down {
-  position: relative;
-  top:55px;
-  left: -0px;
+.location-style{
+  color: sandybrown;
+  background-color: yellow;
 }
-.title2 {
-  text-align: center;
-  color: pink;
-  position: relative;
-  right: -460px;
-  top: 50px;
-}
-.drop-down2{
-  position: relative;
-  color: bisque;
-  top: 50px;
- right: -550px;
-  text-align: center;
-  width: 40%;
-}
-.title2, .drop-down2 {
-  position: relative;
-  top:55px;
-  left: 0px;
+.character-style{
+  background-color: yellow;
 }
