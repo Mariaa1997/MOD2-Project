@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className='app'>
+      <img className='img' src='https://images8.alphacoders.com/114/1148255.jpg' alt="rick-and-morty" ></img>
       <Nav />
  <Routes> 
   <Route path='/' element={<Characters/>}/>
